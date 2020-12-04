@@ -17,7 +17,7 @@ At the moment of writing this guideline, the Lastest BMDatalogger version availa
 # Specifications V3.0+
 
 - ATmega64A Core running at 16Mhz
-- CH240 Serial Adapter for communicating with Computer ([Download Driver Here][])
+- CH340 Serial Adapter for communicating with a Computer by USB ([Download Driver Here][])
 - Can be powered by 5V (USB) or 12V (Input Pin)
 - Intefer with the menu with Two(2x) integrated button on the back OR with externals buttons (not included)
 - Two(2x) Bluetooth Adapters programmed for the communication between the ECU and the BMDatalogger
