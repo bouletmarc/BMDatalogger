@@ -23,9 +23,9 @@ At the moment of writing this guideline, the Lastest BMDatalogger version availa
 - Two(2x) Bluetooth Adapters programmed for the communication between the ECU and the BMDatalogger
 - Display all the Engine Sensor datalogs values (Up to 79 kind of sensor data available!)
 - Display the Engine Error codes (MIL), can also reset the ECU to attemp clearing the codes
-- Integrated setup menu to customize the Diplayed Pages
+- Integrated Setup Menu to customize the Displayed Pages
 - Doesn't require a Computer, the BMDatalogger is an independant device
-- Differents Pages Presets (Small-Medium-Big Font, Progressbar)
+- Differents Pages Presets of Small-Medium-Big Fonts and Progressbars
 
 # Tool for updating parameters 
 
