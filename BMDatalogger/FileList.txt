@@ -2,12 +2,14 @@ BMDatalogger.ino
 ButtonsManager.ino
 CustomCharacter.ino
 DatalogProtocol.ino
+OptionPage.ino
 PeakValues.ino
 ScreenDisplay.ino
 ScreenJ12.ino
-ScreenStart.ino
+ScreenMain.ino
 ScreenTexts.ino
+SettingPage.ino
+SettingPageCursor.ino
 SpeedCounter.ino
-UNUSEDDISPLAY.ino
 Warnings.ino
 Version.txt
