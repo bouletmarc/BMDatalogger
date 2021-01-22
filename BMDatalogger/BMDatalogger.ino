@@ -54,8 +54,8 @@ void backlight() {
 
 //0x20-0x27 - 0x30 - 0x3F
 //byte I2CByte = 0x27;
-const int NextButton = 29;     //Atmega644P=20;     //Atmega328P=8
-const int BackButton = 28;     //Atmega644P=19;     //Atmega328P=9
+const int NextButton = 14;     //Atmega644P=20;     //Atmega328P=8
+const int BackButton = 13;     //Atmega644P=19;     //Atmega328P=9
 const int BackLightPin = A1;   //Atmega644P=12;   //Atmega328P=10
 const int ContrastPin =  A0;   //Atmega644P=13;    //Atmega328P=None
 const int ChipSelectPin = 8;  //Atmega644P=4;   //Atmega328P=None    CS Pin for SD Card
