@@ -95,7 +95,7 @@ int ScreenPage7[8] = {100, 0, 3, 12, 6, 4, 13, 26};
 int ScreenPage8[8] = {41, 37, 35, 24, 25, 23, 17, 21};
 
 const String BoardVersionStr = "2.0";
-const String FirmwareVersionStr = "2.01";
+const String FirmwareVersionStr = "2.02";
 byte ProgressBarMode = 2;
 byte ProgressBarLeft = 0;
 int Timeout = 150;
@@ -123,7 +123,7 @@ int TempMax = 140;
 int WaitingDelay = 0;
 bool WaitingQuick = false;
 
-const int SettingVersion = 3;
+const int SettingVersion = 4;
 //int TimeoutCount = 0;
 byte LastChecksum = 0;
 const long AutoSaveTime = 120000;
@@ -321,7 +321,7 @@ void loop() {
 
 void FirstLoadEEPROM() {
   if (EEPROM.read(0) != SettingVersion) {
-    SaveLoadEEPROM(true);   //save (never create this version settings)
+    SaveLoadEEPROM(true);   //save (never created this version settings before)
   }
   SaveLoadEEPROM(false);  //load
   LastChecksum = GetSettingsSum();
@@ -357,35 +357,35 @@ byte GetSettingsSum() {
   if (NightMode) num = (byte) (num + 1);
   num = (byte) (num + ScreenSettingSelected);
   num = (byte) (num + ScreenOptionSelected);
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage1[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage1[i]));
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage2[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage2[i]));
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage3[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage3[i]));
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage4[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage4[i]));
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage5[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage5[i]));
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage6[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage6[i]));
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage7[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage7[i]));
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     num = (byte) (num + GetMSBFromInt(ScreenPage8[i]));
     num = (byte) (num + GetLSBFromInt(ScreenPage8[i]));
   }
@@ -403,7 +403,7 @@ byte GetSettingsSum() {
   num = (byte) (num + UseKMH);
   num = (byte) (num + O2Type);
   //missing WB table
-  for (byte i = 1; i < 4; i++)  {
+  for (byte i = 0; i < 4; i++)  {
     //(int) (ThisDouble * 100)
     num = (byte) (num + GetMSBFromInt((int) (WBConversion[i] * 100)));
     num = (byte) (num + GetLSBFromInt((int) (WBConversion[i] * 100)));
@@ -411,8 +411,8 @@ byte GetSettingsSum() {
     //num = (byte) (num + GetLSBFromDouble(WBConversion[i]));
   }
   num = (byte) (num + WBModel);
-  for (byte i = 1; i < 4; i++)  num = (byte) (num + MapByte[i]);
-  for (byte i = 1; i < 4; i++)  num = (byte) (num + Tranny[i]);
+  for (byte i = 0; i < 4; i++)  num = (byte) (num + MapByte[i]);
+  for (byte i = 0; i < 4; i++)  num = (byte) (num + Tranny[i]);
   num = (byte) (num + TrannyModel);
   num = (byte) (num + MapModel);
 
@@ -481,42 +481,42 @@ void SaveLoadEEPROM(bool IsSaving) {
   CurrAddr++;
 
   //#####################################################################
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage1[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage1[i]);
     CurrAddr++;
     CurrAddr++;
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage2[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage2[i]);
     CurrAddr++;
     CurrAddr++;
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage3[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage3[i]);
     CurrAddr++;
     CurrAddr++;
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage4[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage4[i]);
     CurrAddr++;
     CurrAddr++;
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage5[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage5[i]);
     CurrAddr++;
     CurrAddr++;
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage6[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage6[i]);
     CurrAddr++;
     CurrAddr++;
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage7[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage7[i]);
     CurrAddr++;
     CurrAddr++;
   }
-  for (byte i = 1; i < 8; i++)  {
+  for (byte i = 0; i < 8; i++)  {
     ScreenPage8[i] = CheckThisInt(IsSaving, CurrAddr, ScreenPage8[i]);
     CurrAddr++;
     CurrAddr++;
@@ -547,7 +547,7 @@ void SaveLoadEEPROM(bool IsSaving) {
   CurrAddr++;
 
   //Missing WB Conversion (double here)
-  for (byte i = 1; i < 4; i++)  {
+  for (byte i = 0; i < 4; i++)  {
     WBConversion[i] = CheckThisDouble(IsSaving, CurrAddr, WBConversion[i]);
     CurrAddr++;
     CurrAddr++;
@@ -556,11 +556,11 @@ void SaveLoadEEPROM(bool IsSaving) {
   WBModel = CheckThisByte(IsSaving, CurrAddr, WBModel);
   CurrAddr++;
 
-  for (byte i = 1; i < 4; i++)  {
+  for (byte i = 0; i < 4; i++)  {
     MapByte[i] = CheckThisByte(IsSaving, CurrAddr, MapByte[i]);
     CurrAddr++;
   }
-  for (byte i = 1; i < 4; i++)  {
+  for (byte i = 0; i < 4; i++)  {
     Tranny[i] = CheckThisByte(IsSaving, CurrAddr, Tranny[i]);
     CurrAddr++;
   }
