@@ -1,0 +1,16 @@
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\bin\Debug\BMDatalogger.exe
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\bin\Debug\BMDatalogger.pdb
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.csprojResolveAssemblyReference.cache
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.Form1.resources
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.Properties.Resources.resources
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.csproj.GenerateResource.Cache
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.exe
+C:\Users\CoCo\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.pdb
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.exe
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.pdb
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\bin\Debug\BMDatalogger.exe
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\bin\Debug\BMDatalogger.pdb
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.Form1.resources
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.Properties.Resources.resources
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.csproj.GenerateResource.Cache
+C:\Users\boule\Documents\Visual Studio 2015\Projects\BMDatalogger\BMDatalogger\obj\Debug\BMDatalogger.csprojAssemblyReference.cache
